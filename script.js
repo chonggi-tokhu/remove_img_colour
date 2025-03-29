@@ -19,6 +19,7 @@ function remove_colour(imgel, { r, g, b } = { r: 176, g: 0, b: 176 }, colour_mar
     return canvas;
 }  
 
+
 function crop_auto(imgel, { cropsize_x, cropsize_y } = { cropsize_x: 562, cropsize_y: 562 }, { looptime_x, looptime_y } = { looptime_x: 4, looptime_y: 3 }) {
     if (!(imgel instanceof HTMLImageElement || imgel instanceof Image)) {
         return false;
@@ -31,7 +32,7 @@ function crop_auto(imgel, { cropsize_x, cropsize_y } = { cropsize_x: 562, cropsi
             canvas.width = cropsize_x;
             canvas.height = cropsize_y;
             var ctx = canvas.getContext("2d");
-            ctx.drawImage(imgel, i, j, i + cropsize_x, j + cropsize_y);
+            ctx.drawImage(imgel, i, j, i + cropsize_x, j + cropsize_y, 0, 0, cropsize_x, cropsize_y);
             myarr.push(canvas);
         }
     }

@@ -24,8 +24,8 @@ function crop_auto(imgel, { cropsize_x, cropsize_y } = { cropsize_x: 562, cropsi
         return false;
     }
     var myarr = [];
-    for (var i = 0; i < looptime_x; i += cropsize_x) {
-        for (var j = 0; j < looptime_y; j += cropsize_y) {
+    for (var i = 0; i < looptime_x * cropsize_x; i += cropsize_x) {
+        for (var j = 0; j < looptime_y * cropsize_y; j += cropsize_y) {
             var canvas_pr = document.createElement("canvas");
             var canvas = document.body.appendChild(canvas_pr);
             canvas.width = cropsize_x;

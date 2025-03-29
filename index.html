@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove colour</title>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <input type="text" placeholder="이미지 소스">
+        <button onclick="setImgSrc(this.parentElement.querySelector('input').value);">이미지 소스 정하기</button>
+    </div>
+    <br>
+    <img src="" width="1125" height="576" id="myimg" onclick="remove_colour(this,{r:176,g:0,b:176},20);">
+    <script>
+        var imgel = document.getElementById("myimg");
+        function setImgSrc(src) {
+            imgel.src = src;
+        }
+    </script>
+</body>
+
+</html>

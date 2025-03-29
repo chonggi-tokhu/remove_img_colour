@@ -32,7 +32,7 @@ function crop_auto(imgel, { cropsize_x, cropsize_y } = { cropsize_x: 562, cropsi
             canvas.width = cropsize_x;
             canvas.height = cropsize_y;
             var ctx = canvas.getContext("2d");
-            ctx.drawImage(imgel, i, j, i + cropsize_x, j + cropsize_y, 0, 0, cropsize_x, cropsize_y);
+            ctx.drawImage(imgel, i, j, cropsize_x, cropsize_y, 0, 0, cropsize_x, cropsize_y);
             myarr.push(canvas);
         }
     }

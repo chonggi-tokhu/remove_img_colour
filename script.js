@@ -15,6 +15,6 @@ function remove_colour(imgel, { r, g, b } = { r: 176, g: 0, b: 176 }, colour_mar
             imgdata.data[i * 4 + 3] = 0;
         }
     }
-    ctx.putImageData(imgdata);
+    ctx.putImageData(imgdata, 0, 0);
     return canvas;
-}
+}  
